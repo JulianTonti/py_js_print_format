@@ -37,4 +37,30 @@ print`grouping _   |${(Math.PI * 10000000) + ':_'}|`;
 print`grouping ,   |${(Math.PI * 10000000) + ':,'}|`;
 print`mixed 1      |${(Math.PI * 10000000) + ': =+20,.3'}|`;
 print`mixed 2      |${1234567 + ': =+20,.3'}|`;
+
+/* outputs
+align left   |left                |
+align right  |               right|
+align middle |       middle       |
+align signed |+             signed|
+binary       |11111111|
+decimal      |255|
+octal        |377|
+hex lower    |ff|
+hex upper    |FF|
+unicode      | ‍ ❤ ️ ‍|
+precision 3  |3.142|
+sci lower    |3.141593e+7|
+sci upper    |3.141593E+7|
+sci prec3    |3.142e+7|
+sci prec6    |3.141593e+7|
+fixed prec3  |31415926.536|
+locale       |31,415,926.536|
+string (def) |31415926.535897933|
+percent      |12.345670%|
+grouping _   |31_415_926.535898|
+grouping ,   |31,415,926.535898|
+mixed 1      |+     31,415,926.536|
+mixed 1      |+          1,234,567|
+*/
 ```
