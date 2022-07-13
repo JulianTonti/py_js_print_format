@@ -1,0 +1,11 @@
+{
+  "name": "py_js_print_format",
+  "version": "1.0.0",
+  "description": "Python like string formatting in JS.",
+  "main": "main.js",
+  "scripts": {
+    "test": "node ./main.js"
+  },
+  "author": "Julian Tonti-Filippini <julian.tonti@gmail.com>",
+  "license": "MIT"
+}
