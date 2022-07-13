@@ -18,11 +18,15 @@ print`
   align right  |${`right: >20`}|
   align middle |${`middle: ^20`}|
   align signed |${`+signed: =20`}|
-  binary       |${'255:b'}|
   decimal      |${'255:d'}|
+  binary       |${'255:b'}|
   octal        |${'255:o'}|
   hex lower    |${'255:x'}|
   hex upper    |${'255:X'}|
+  x binary     |${'255:#b'}|
+  x octal      |${'255:#o'}|
+  x hex lower  |${'255:#x'}|
+  x hex upper  |${'255:#X'}|
   unicode      |${'8205:c'}${'10084:c'}${'65039:c'}${'8205:c'}|
   precision 3  |${Math.PI+':.3'}|
   sci lower    |${Math.PI*10000000+':e'}|
@@ -37,17 +41,25 @@ print`
   grouping ,   |${'1234567:,'}|
   mixed 1      |${Math.PI*10000000+': =+20,.3'}|
   mixed 2      |${'1234567: =+20,.3'}|
+  zeros left   |${'-123.456:<+020'}|
+  zeros right  |${'-123.456:>+020'}|
+  zeros middle |${'-123.456:^+020'}|
+  zeros def    |${'-123.456:=+020'}|
 `;
 /* outputs
   align left   |left                |
   align right  |               right|
   align middle |       middle       |
   align signed |+             signed|
-  binary       |11111111|
   decimal      |255|
+  binary       |11111111|
   octal        |377|
   hex lower    |ff|
   hex upper    |FF|
+  x binary     |0b11111111|
+  x octal      |0o377|
+  x hex lower  |0xff|
+  x hex upper  |0XFF|
   unicode      |‍❤️‍|
   precision 3  |3.142|
   sci lower    |3.141593e+7|
@@ -62,5 +74,9 @@ print`
   grouping ,   |1,234,567|
   mixed 1      |+     31,415,926.536|
   mixed 2      |+          1,234,567|
+  zeros left   |-123.456000000000000|
+  zeros right  |-000000000123.456000|
+  zeros middle |-00000123.4560000000|
+  zeros def    |-000000000123.456000|
 */
 ```
